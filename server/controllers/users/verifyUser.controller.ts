@@ -3,7 +3,7 @@ import { UserModel } from "../../models/user.model";
 const bcrypt = require("bcryptjs");
 
 export async function verifyUser(req: NextApiRequest, res: NextApiResponse) {
-  const result = await UserModel.findOne({ _id: req.query.uid });
+  const result = await UserModel.findOne({ username: req.query.un });
   if (!result)
     return res.status(400).json({
       success: false,
