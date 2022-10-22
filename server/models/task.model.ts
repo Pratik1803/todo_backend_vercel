@@ -6,7 +6,7 @@ const taskSchema = new Schema({
     required: true,
     trim: true,
   },
-  uid: String,
+  un: String,
   completed: Boolean,
 });
 
